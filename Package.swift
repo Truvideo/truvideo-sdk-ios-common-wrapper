@@ -6,6 +6,7 @@ import PackageDescription
 let package = Package(
     name: "Common",
     products: [
+        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Common",
             targets: ["CommonTargets"]),
@@ -14,18 +15,18 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "Common",
-            url: "https://github.com/Truvideo/truvideo-sdk-ios-common-wrapper/releases/download/0.0.26/Common.xcframework.zip",
-            checksum: "3574c57535af0da3f903a4a95f32baec8fc907ff4405a9ca8708e56077a135d4"
+            url: "https://github.com/Truvideo/truvideo-sdk-ios-common-wrapper/releases/download/0.0.21/Common.xcframework.zip",
+            checksum: "unknown"
         ),
         .binaryTarget(
             name: "Shared",
-            url: "https://github.com/Truvideo/truvideo-sdk-ios-common-wrapper/releases/download/0.0.26/shared.xcframework.zip",
-            checksum: "4445be410f9722f25088b0ff1b43af28788a19a286ab18b51e856ac25d92b6a6"
+            url: "https://github.com/Truvideo/truvideo-sdk-ios-common-wrapper/releases/download/LIB_VERSION/shared.xcframework.zip",
+            checksum: "c7eecb84264ab5a98fbda2e1b2fed44ac4c301e31605234e336f8deff85b33d9"
         ),
         .target(
             name: "CommonTargets",
             dependencies: [
-                .target(name: "Common"),
+                .target(name: "Common")
                 .target(name: "Shared")
             ],
             path: "Sources"
