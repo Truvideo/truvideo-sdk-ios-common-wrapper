@@ -3,33 +3,24 @@
 
 import PackageDescription
 
-let packageVersion = "0.0.1"
-let sharedPackageVersion = "0.0.3"
-
 let package = Package(
     name: "Common",
     products: [
-        // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "Common",
             targets: ["CommonTargets"]),
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
+    dependencies: [],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "Common",
-            url: "https://github.com/Truvideo/truvideo-sdk-ios-common-wrapper/releases/download/\(packageVersion)/Common.xcframework.zip",
-            checksum: "0d4b5f63a41b265a9522f8957785bdb04c355a325cb38a9bff760281e96d7d38"
+            url: "https://github.com/Truvideo/truvideo-sdk-ios-common-wrapper/releases/download/0.0.26/Common.xcframework.zip",
+            checksum: "3574c57535af0da3f903a4a95f32baec8fc907ff4405a9ca8708e56077a135d4"
         ),
         .binaryTarget(
             name: "Shared",
-            url: "https://github.com/Truvideo/truvideo-sdk-ios-common/releases/download/\(sharedPackageVersion)/shared.xcframework.zip",
-            checksum: "5028e25b25b24e6f35fbe4484dfc438a31345a9d5bf5666640e99849cfb497cb"
+            url: "https://github.com/Truvideo/truvideo-sdk-ios-common-wrapper/releases/download/0.0.26/shared.xcframework.zip",
+            checksum: "4445be410f9722f25088b0ff1b43af28788a19a286ab18b51e856ac25d92b6a6"
         ),
         .target(
             name: "CommonTargets",
