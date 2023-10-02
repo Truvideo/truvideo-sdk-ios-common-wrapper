@@ -26,7 +26,7 @@ let package = Package(
         .target(
             name: "CommonTargets",
             dependencies: [
-                .target(name: "Common")
+                .target(name: "Common"),
                 .target(name: "Shared")
             ],
             path: "Sources"
